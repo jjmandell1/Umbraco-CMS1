@@ -273,3 +273,4 @@ System.Xml.XmlException: There is no Unicode byte order mark. Cannot switch to U
  2016-08-26 14:17:56,375 [P8252/D2/T7] INFO  umbraco.content - Loaded Xml from file.
  2016-08-26 14:17:56,769 [P8252/D2/T7] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Core.PropertyEditors.IParameterEditor
  2016-08-26 14:17:56,770 [P8252/D2/T7] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Core.PropertyEditors.IParameterEditor, found 0 (took 1ms)
+ 2016-08-26 14:18:56,565 [P8252/D2/T16] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2016-08-25 14:18:56
