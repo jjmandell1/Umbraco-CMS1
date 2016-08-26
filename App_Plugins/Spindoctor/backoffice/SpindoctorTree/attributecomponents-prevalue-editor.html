@@ -1,0 +1,9 @@
+﻿<div ng-controller="Spindoctor.AttributeComponentsPreValueEditorController">
+	<div id="sd-profileattributes">
+        <div id="sd-profileattributes-contents">
+            <div ng-repeat="attribute in profileattributes" class="sd-profileattributes-component-row">
+                <div class="sd-profileattributes-component-row-name"><input type="checkbox" name="selected" ng-checked="isAttributeChecked(attribute.Id)" ng-click="checkAttribute(attribute.Id)"> <i class="icon-activity"></i> {{ attribute.Name }}</div>
+            </div>
+        </div>
+    </div>
+</div>

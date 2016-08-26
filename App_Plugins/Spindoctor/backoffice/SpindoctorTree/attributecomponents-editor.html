@@ -1,0 +1,15 @@
+﻿<div ng-controller="Spindoctor.AttributeComponentsEditorController">
+	<div id="sd-profileattributes" style="min-width:430px !important;">
+        <div id="sd-profileattributes-contents">
+            <div ng-repeat="attribute in profileAttributes" class="sd-profileattributes-attribute-row">
+                <div class="sd-profileattributes-attribute" style="padding-left:10px !important;"><i class="icon-activity"></i> {{ attribute.Name }}
+                    <div ng-repeat="component in attribute.Components" class="sd-profileattributes-component-row">
+                        <div class="sd-profileattributes-component-row-name">{{ component.Name }}</div>
+                        <div class="sd-profileattributes-component-row-slider"><div style="width:210px;" id="page_slider_{{ component.Id }}"></div></div>
+                    </div>
+                </div>
+                <span style="clear:both;">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+</div>

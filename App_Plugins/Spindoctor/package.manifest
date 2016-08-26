@@ -1,0 +1,29 @@
+{   
+	propertyEditors: [		
+		{
+			alias: "Spindoctor.AttributeComponentsEditor",
+			name: "Spindoctor Attribute Components Editor",
+			hideLabel: false,
+			valueType: "STRING",
+			editor: {
+				view: "~/App_Plugins/Spindoctor/backoffice/SpindoctorTree/attributecomponents-editor.html"
+			},
+			prevalues: {
+	            fields: [{
+                    label: "Profile attributes",
+                    description: "Select which profile attributes are relevant to this data type.",
+					key: "ProfileAttributes",
+                    view: "~/App_Plugins/Spindoctor/backoffice/SpindoctorTree/attributecomponents-prevalue-editor.html",
+                }]
+			}
+		}
+	],
+    javascript: [
+        '~/App_Plugins/Spindoctor/backoffice/Resources/bootstrap-slider.js',
+        '~/App_Plugins/Spindoctor/backoffice/Resources/Spindoctor.js'
+    ],
+	css: [
+        '~/App_Plugins/Spindoctor/backoffice/Resources/slider.css',
+        '~/App_Plugins/Spindoctor/backoffice/Resources/Spindoctor.css'
+	]
+}
