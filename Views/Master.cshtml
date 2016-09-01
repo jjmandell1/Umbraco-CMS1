@@ -2,76 +2,46 @@
 @{
     Layout = null;
 	var home = @CurrentPage.Site();
-}
+}<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-    <!-- Meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="@CurrentPage.siteDescription">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <title>@CurrentPage.Name | @CurrentPage._siteTitle</title>
-	
-	<!-- Fonts -->
-	<link href="//fonts.googleapis.com/css?family=Merriweather:400,700,300,900" rel="stylesheet" type="text/css">
-	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" type="text/css">
-	
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/fanoe.css">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" href="css/style.css">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+	<script src="js/libs/modernizr-2.0.6.min.js"></script>
+</head>
+<body>
 
-  <body>
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-8 col-sm-12 col-md-4">
-			<a href="@home.Url">
-            	<div class="brand" style="background-image:url('@(home.SiteLogo)?height=65&width=205&bgcolor=000')"></div>
-			</a>
-          </div>
-          <div class="col-sm-12 col-md-8">
-            <nav>
-			  
-              @{ Html.RenderPartial("MainNavigation"); }
+	<div id="header-container">
+		<header class="wrapper clearfix">
+			<h1 id="title">@Umbraco.Field("pageTitle")</h1>
+			<nav>
+				<ul>
+					<li><a href="#">nav ul li a</a></li>
+					<li><a href="#">nav ul li a</a></li>
+					<li><a href="#">nav ul li a</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+	@RenderBody() 
 
-            </nav>
-          </div>
-        </div>
-      </div>
+	<div id="footer-container">
+		<footer class="wrapper">
+			<h3>@Umbraco.Field("footerText")</h3>
+		</footer>
+	</div>
 
-      <div id="toggle" class="toggle">
-        <a href="#" class="cross"><span></span></a>
-      </div>
-    </header>
-	
-    @RenderBody()
-
-    <footer class="field dark">
-      <div class="container">
-        <div class="row">
-			
-		  @{ Html.RenderPartial("BottomNavigation"); }
-
-        </div>
-      </div>
-    </footer>
-    
-    <!-- Javascripts -->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-	<script src="/scripts/fanoe.js"></script>
-  </body>
+</body>
 </html>
